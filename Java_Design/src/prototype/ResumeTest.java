@@ -7,6 +7,8 @@ public class ResumeTest {
 	@Test
 	public void test() throws CloneNotSupportedException {
 		System.out.println("===============Test Start===============");
+		System.out.println();
+
 		Resume resume = new Resume("Jack", "Junior Engineer", 1);
 		resume.setExperience("2019/06/09", "CyberSoft");
 		
@@ -20,10 +22,15 @@ public class ResumeTest {
 		
 		System.out.println("==========The First Resume==========");
 		resume.display();
+		
 		System.out.println("==========The Second Resume (from the first resume)==========");
 		resume2.display();
+		
 		System.out.println("==========The Third Resume (from the second resume)==========");
 		resume3.display();
 		
+		System.out.println("===============Test End===============");
+		
 	}
+
 }
