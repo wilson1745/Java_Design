@@ -6,21 +6,34 @@ package prototype;
 public class Resume implements Cloneable {
 	
 	private String name;
-	private int level;
 	private String profession;
+	private int level;
 	private AdventureExperience experience;
 	
 	public Resume(String name, String profession, int level) {
 		super();
 		this.name = name;
-		this.level = level;
 		this.profession = profession;
+		this.level = level;
 		this.experience = new AdventureExperience();
 	}
 	
+	private Resume(AdventureExperience experience) throws CloneNotSupportedException {
+		this.experience = (AdventureExperience) experience.clone();
+	}
+	
+//	@Override
+//	public Object clone() throws CloneNotSupportedException {
+//		return super.clone();
+//	}
+	
 	@Override
 	public Object clone() throws CloneNotSupportedException {
-		return super.clone();
+		Resume clone = new Resume(experience);
+		clone.setName(this.name);
+		clone.setProfession(this.profession);
+		clone.setLevel(this.level);
+		return clone;
 	}
 	
 	public void display() {
