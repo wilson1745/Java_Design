@@ -18,23 +18,24 @@ public class Resume implements Cloneable {
 		this.experience = new AdventureExperience();
 	}
 	
-	private Resume(AdventureExperience experience) throws CloneNotSupportedException {
-		this.experience = (AdventureExperience) experience.clone();
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 	
 //	@Override
 //	public Object clone() throws CloneNotSupportedException {
-//		return super.clone();
+//		// 直接使用預設super.clone()不會得到新的實體，只會複製String, int等基本型態，experience被複製出來只是參照(reference)
+//		Resume clone = new Resume(experience);
+//		clone.setName(this.name);
+//		clone.setProfession(this.profession);
+//		clone.setLevel(this.level);
+//		return clone;
 //	}
 	
-	@Override
-	public Object clone() throws CloneNotSupportedException {
-		Resume clone = new Resume(experience);
-		clone.setName(this.name);
-		clone.setProfession(this.profession);
-		clone.setLevel(this.level);
-		return clone;
-	}
+//	private Resume(AdventureExperience experience) throws CloneNotSupportedException {
+//		this.experience = (AdventureExperience) experience.clone();
+//	}
 	
 	public void display() {
 		System.out.printf("Adventurer: %s-%s Level: %d \n", name, profession, level);

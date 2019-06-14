@@ -9,16 +9,17 @@ public class ResumeTest {
 		System.out.println("===============Test Start===============");
 		System.out.println();
 
-		Resume resume = new Resume("Jack", "Junior Engineer", 1);
-		resume.setExperience("2019/06/09", "CyberSoft");
+		Resume resume = new Resume("Lex Tsai", "Senior Engineer", 1);
+		resume.setExperience("2017/06/09", "CyberSoft");
 		
 		Resume resume2 = (Resume) resume.clone();
 		resume2.setLevel(2);
-		resume2.setExperience("2019/06/10", "Apple Inc");
+		resume2.setExperience("2019/05/25", "Apple Inc");
 		
 		Resume resume3 = (Resume) resume2.clone();
-		resume3.setProfession("Killing White Ghosts");
-		resume3.setExperience("2019/06/18", "Game of the Thrones");
+		resume3.setLevel(99);
+		resume3.setProfession("Killing the White Ghosts");
+		resume3.setExperience("2199/11/18", "Game of the Thrones");
 		
 		System.out.println("==========The First Resume==========");
 		resume.display();
