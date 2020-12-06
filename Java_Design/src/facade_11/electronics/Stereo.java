@@ -4,7 +4,7 @@ package facade_11.electronics;
  * @description Stereo
  * 
  * @author Wilson
- * @date 2020年10月11日
+ * @date 2020/10/11
  */
 public class Stereo extends Electronics {
 
@@ -22,7 +22,7 @@ public class Stereo extends Electronics {
 	@Override
 	public void showStatus() {
 		super.showStatus();
-		System.out.println(this.getClass().getSimpleName() + " the volume is " + sound);
+		System.out.println(this.getClass().getSimpleName() + " volume is " + sound);
 	}
 
 }

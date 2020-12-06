@@ -4,7 +4,7 @@ package facade_11.electronics;
  * @description PlayStation3
  * 
  * @author Wilson
- * @date 2020年10月11日
+ * @date 2020/10/11
  */
 public class PlayStation3 extends Electronics {
 
@@ -27,7 +27,7 @@ public class PlayStation3 extends Electronics {
 	@Override
 	public void showStatus() {
 		super.showStatus();
-		System.out.println(this.getClass().getSimpleName() + " currently playing the " + cd);
+		System.out.println(this.getClass().getSimpleName() + " is playing the " + cd);
 	}
 
 }

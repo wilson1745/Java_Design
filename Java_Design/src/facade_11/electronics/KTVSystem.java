@@ -4,7 +4,7 @@ package facade_11.electronics;
  * @description KTV
  * 
  * @author Wilson
- * @date 2020年10月11日
+ * @date 2020/10/11
  */
 public class KTVSystem extends Electronics {
 

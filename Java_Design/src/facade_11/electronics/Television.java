@@ -4,7 +4,7 @@ package facade_11.electronics;
  * @description Television
  * 
  * @author Wilson
- * @date 2020年10月11日
+ * @date 2020/10/11
  */
 public class Television extends Electronics {
 
@@ -24,24 +24,51 @@ public class Television extends Electronics {
 		this.channel = channel;
 	}
 
+	public void showTv() {
+		System.out.println(this.getClass().getSimpleName() + " current channel: " + channel);
+	}
+
 	@Override
 	public void showStatus() {
 		super.showStatus();
 
 		if (true == isPowerOn()) {
-			System.out.println(this.getClass().getSimpleName() + " the volume is " + sound);
+			System.out.println(this.getClass().getSimpleName() + " volume is " + sound);
 
-			// switch (key) {
-			// case value:
-			//
-			// break;
-			//
-			// default:
-			// break;
-			// }
+			switch (source) {
+			case "tvBox":
+				System.out.println(this.getClass().getSimpleName() + ", Channel: " + channel);
+				break;
+			case "ktv":
+				System.out.println(this.getClass().getSimpleName() + ", Ktv is playing!");
+				break;
+			case "ps":
+				System.out.println(this.getClass().getSimpleName() + ", PS is running!");
+				break;
+			default:
+				break;
+			}
 		}
+	}
 
-		System.out.println(this.getClass().getSimpleName() + " currently playing the " + cd);
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	public int getChannel() {
+		return channel;
+	}
+
+	public void setChannel(int channel) {
+		this.channel = channel;
+	}
+
+	public int getSound() {
+		return sound;
 	}
 
 }
